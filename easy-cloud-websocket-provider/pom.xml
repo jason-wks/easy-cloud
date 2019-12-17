@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+        <groupId>com.ys</groupId>
+        <artifactId>easy-cloud</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.ys</groupId>
+	<artifactId>easy-cloud-websocket-provider</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>easy-cloud-websocket-provider</name>
+    <packaging>jar</packaging>
+	<description>Demo project for Spring Boot</description>
+
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSES-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>wangkeshun</id>
+            <name>Strong</name>
+            <email>keshun0825@163.com</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <!--Spring boot start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--Spring boot end-->
+
+        <!--Spring cloud start-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <!--Spring cloud end-->
+
+        <!--other start-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--other end-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.easy.cloud.websocket.provider.WebSocketProviderApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

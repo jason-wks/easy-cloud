@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="sockjs.min.js"></script>
+    <script src="stomp.min.js"></script>
+</head>
+<body>
+<div id="msg"></div>
+
+<script>
+    var sock = new SockJS("http://v1.hiwe100.com:8699/socket");
+    var stompClient = Stomp.over(sock);
+    stompClient.connect({},function(data){
+        stompClient.subscribe("/server/sendMessage",function(response){
+           $("#msg").append(response.body + "<br/>")
+        })
+    })
+</script>
+</body>
+</html>

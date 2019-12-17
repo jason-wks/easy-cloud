@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+        <groupId>com.ys</groupId>
+        <artifactId>easy-cloud-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>easy-cloud-dependencies/pom.xml</relativePath> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.ys</groupId>
+	<artifactId>easy-cloud</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>easy-cloud</name>
+    <packaging>pom</packaging>
+	<description>Demo project for Spring Boot</description>
+
+    <licenses>
+        <license>
+            <name>Apache 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSES-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>wangkeshun</id>
+            <name>Strong</name>
+            <email>keshun0825@163.com</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>easy-cloud-dependencies</module>
+        <module>easy-cloud-user-provider</module>
+        <module>easy-cloud-websocket-provider</module>
+        <module>easy-cloud-cache-provider</module>
+        <module>easy-cloud-oss-provider</module>
+        <module>easy-cloud-user-consumer</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ys</groupId>
+                <artifactId>easy-cloud-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
